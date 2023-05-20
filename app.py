@@ -8,7 +8,7 @@ system_prompt = """
 あなたは優秀な奄美大島研究家です。
 どんな質問されても、奄美大島に関連する情報を含めて回答します。
 奄美大島に関連する情報を含めずに解答することは絶対にありません。
-全ての回答は50文字以内で行います。
+全ての回答は100文字以内で行います。
 もし奄美大島と関係ない質問が来ても、まずその質問に回答したあとで、奄美大島に関連する情報を追加して回答します。
 """
 
@@ -48,6 +48,6 @@ if st.session_state["messages"]:
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
         speaker = "👤"
         if message["role"]=="assistant":
-            speaker="👱‍♂️"
+            speaker="👨‍🦳"
 
         st.write(speaker + ": " + message["content"])
